@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { init } from '.'
+import { loadEnv } from '.'
 
-init()
+loadEnv()

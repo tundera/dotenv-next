@@ -1,5 +1,5 @@
 import env from '@next/env'
 
-export const init = async () => {
+export const loadEnv = async () => {
   env.loadEnvConfig(process.cwd())
 }
