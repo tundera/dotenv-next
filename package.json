@@ -55,7 +55,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "lint": "TIMING=1 eslint --ext .js,.ts ./src/**/*.ts ./test/**/*.ts",
     "commit": "cz",
-    "prepare": "husky install",
+    "postinstall": "husky install",
     "size": "size-limit",
     "test": "echo \"No tests set up.\"",
     "test:watch": "jest --watch",
