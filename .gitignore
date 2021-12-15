@@ -4,14 +4,9 @@
 **/dist
 
 # dependencies
-node_modules
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+/node_modules
+/.pnp
+.pnp.js
 
 # TypeScript
 **/*.tsbuildinfo
