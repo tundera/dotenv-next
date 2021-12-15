@@ -1,6 +1,6 @@
 {
   "name": "dotenv-next",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Load environment variables in your scripts following the priority specification popularized by Next.js",
   "license": "MIT",
   "homepage": "https://github.com/tundera/dotenv-next",
@@ -47,8 +47,12 @@
   ],
   "scripts": {
     "analyze": "size-limit --why",
-    "build:esm": "swc ./src/index.ts --out-file dist/index.mjs ./src/register.ts --out-file dist/register.mjs --config module.type=es6 module.dynamicImport=false",
-    "build:cjs": "swc ./src/index.ts --out-file dist/index.js ./src/register.ts --out-file dist/register.js --config module.type=commonjs module.dynamicImport=false",
+    "build:src:esm": "swc ./src/index.ts --out-file dist/index.mjs --config module.type=es6 module.dynamicImport=false",
+    "build:src:cjs": "swc ./src/index.ts --out-file dist/index.js --config module.type=commonjs module.dynamicImport=false",
+    "build:register:esm": "swc ./src/register.ts --out-file dist/register.mjs --config module.type=es6 module.dynamicImport=false",
+    "build:register:cjs": "swc ./src/register.ts --out-file dist/register.js --config module.type=commonjs module.dynamicImport=false",
+    "build:esm": "yarn build:src:esm && yarn build:src:cjs",
+    "build:cjs": "yarn build:register:esm && yarn build:register:cjs",
     "build:types": "tsc --build",
     "build": "concurrently -n \"ESM,CJS,TYPES\" -c \"red.bold,blue.bold,green.bold\" \"yarn build:esm\" \"yarn build:cjs\" \"yarn build:types\"",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
