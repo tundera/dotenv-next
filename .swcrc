@@ -1,0 +1,11 @@
+{
+  "jsc": {
+    "loose": true,
+    "target": "es2022",
+    "parser": {
+      "syntax": "typescript",
+      "dynamicImport": true,
+      "tsx": false
+    }
+  }
+}
