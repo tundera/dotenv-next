@@ -1,6 +1,6 @@
 {
   "name": "dotenv-next",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Load environment variables in your scripts following the priority specification popularized by Next.js",
   "license": "MIT",
   "homepage": "https://github.com/tundera/dotenv-next",
