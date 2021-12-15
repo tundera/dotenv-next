@@ -48,8 +48,8 @@
   ],
   "scripts": {
     "analyze": "size-limit --why",
-    "build:esm": "swc ./src/index.ts --out-file dist/index.mjs ./src/register.ts --out-file=dist/register.mjs --config module.type=es6 module.dynamicImport=false",
-    "build:cjs": "swc ./src/index.ts --out-file dist/index.js ./src/register.ts --out-file=dist/register.js -C module.type=commonjs module.dynamicImport=false",
+    "build:esm": "swc ./src/index.ts --out-file dist/index.mjs ./src/register.ts --out-file dist/register.mjs --config module.type=es6 module.dynamicImport=false",
+    "build:cjs": "swc ./src/index.ts --out-file dist/index.js ./src/register.ts --out-file dist/register.js --config module.type=commonjs module.dynamicImport=false",
     "build:types": "tsc --build",
     "build": "concurrently -n \"ESM,CJS,TYPES\" -c \"red.bold,blue.bold,green.bold\" \"yarn build:esm\" \"yarn build:cjs\" \"yarn build:types\"",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",

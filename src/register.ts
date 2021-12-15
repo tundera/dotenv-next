@@ -1,3 +1,3 @@
-import { init } from './env'
+import { init } from '.'
 
 init()
