@@ -2,9 +2,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
-    tsconfigRootDir: __dirname,
-    project: ['tsconfig.json'],
-    extraFileExtensions: ['.mjs', '.cjs'],
+    extraFileExtensions: ['.mjs', '.mts', '.cjs', '.cts'],
   },
   env: {
     node: true,
@@ -23,12 +21,6 @@ module.exports = {
       files: ['**/*.test.ts', '**/test/**', '**/__tests__/**'],
       env: {
         'jest/globals': true,
-      },
-      parserOptions: {
-        sourceType: 'module',
-        tsconfigRootDir: __dirname,
-        project: ['tsconfig.test.json'],
-        extraFileExtensions: ['.mjs', '.cjs'],
       },
       extends: ['plugin:jest/recommended', 'plugin:prettier/recommended'],
     },

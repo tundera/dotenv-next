@@ -1,3 +1,5 @@
-import { init } from '.'
+#!/usr/bin/env node
+
+import { init } from './index'
 
 init()
