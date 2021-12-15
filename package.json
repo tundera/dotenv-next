@@ -1,6 +1,6 @@
 {
   "name": "dotenv-next",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Load environment variables in your scripts following the priority specification popularized by Next.js",
   "license": "MIT",
   "homepage": "https://github.com/tundera/dotenv-next",
@@ -46,8 +46,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "lint": "TIMING=1 eslint --ext .js,.ts ./src/**/*.ts ./test/**/*.ts",
     "commit": "cz",
-    "prepare": "husky install",
-    "prepublish": "yarn build",
+    "prepare": "husky install && yarn build",
     "size": "size-limit",
     "test": "echo \"No tests set up.\"",
     "test:watch": "jest --watch",
